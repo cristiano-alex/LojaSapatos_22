@@ -53,6 +53,7 @@ namespace LojaSapatos
             InitializeComponent();
             this.DataContext = this;
 
+
             FacadeSapato facade = new FacadeSapato();
             this.Sapatos_ = facade.ObterSapatos();
 
