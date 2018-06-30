@@ -1,0 +1,21 @@
+﻿<Window x:Class="LojaSapatos.View.Carrinho"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LojaSapatos.View"
+        mc:Ignorable="d"
+        Title="Carrinho" Height="450" Width="800">
+    <Grid HorizontalAlignment="Left" Height="419" VerticalAlignment="Top" Width="792">
+        <Image Source="/imagens/fundo.jpg" Stretch="Fill"/>
+        <Border Background="Black" Opacity="0.4" Margin="10,10,21,10" CornerRadius="30"/>
+        <DataGrid x:Name="CarrinhoDataGrid" 
+                  AutoGenerateColumns="True" HorizontalAlignment="Left" Height="279" Margin="40,46,0,0" VerticalAlignment="Top" Width="699">
+
+        </DataGrid>
+        <Button x:Name="TB_Confirmar_button" Content="Confirmar" HorizontalAlignment="Left" Margin="626,358,0,0" VerticalAlignment="Top" Width="113" Height="34" Click="TB_Confirmar_button_Click"/>
+
+
+
+    </Grid>
+</Window>

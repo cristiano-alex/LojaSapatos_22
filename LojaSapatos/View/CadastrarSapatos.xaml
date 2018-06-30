@@ -1,0 +1,48 @@
+﻿<Window x:Class="LojaSapatos.CadastrarSapatos"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LojaSapatos"
+        mc:Ignorable="d"
+        Title="CadastrarSapatos" Height="450" Width="800">
+    <Grid>
+        <Grid HorizontalAlignment="Left" Height="419" VerticalAlignment="Top" Width="792">
+            <Image Source="/imagens/fundo.jpg" Stretch="Fill"/>
+            <Border Background="Black" Opacity="0.4" Margin="583,25,31,81" CornerRadius="30"/>
+            <Border Background="Black" Opacity="0.4" Margin="21,25,239,81" CornerRadius="30"></Border>
+            <Button x:Name="ButtonSalvar" Content="Salvar" HorizontalAlignment="Left" Margin="608,58,0,0" VerticalAlignment="Top" Width="128" Height="49" Click="ButtonSalvar_Click"/>
+            
+            <TextBox x:Name="TB_Nome_Sapato" HorizontalAlignment="Left" Height="23" Margin="147,62,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"
+                     Text="{Binding Path=SapatoSelecionado.SP_Nome}"/>
+            
+            <Label Content="Nome:" HorizontalAlignment="Left" Margin="58,58,0,0" VerticalAlignment="Top" Foreground="White"/>
+            
+            <Label Content="Cadarço:&#xD;&#xA;" HorizontalAlignment="Left" Margin="58,98,0,0" VerticalAlignment="Top" Foreground="White"/>
+            
+            <RadioButton x:Name="RB_Y" Content="Sim" HorizontalAlignment="Left" Margin="147,104,0,0" VerticalAlignment="Top" Foreground="White"
+                         DataContext="{Binding Path=SapatoSelecionado.SP_Cadarco}"/>
+            
+            <RadioButton x:Name="RB_N" Content="Não" HorizontalAlignment="Left" Margin="226,104,0,0" VerticalAlignment="Top" Foreground="White"
+                         DataContext="{Binding Path=SapatoSelecionado.SP_Cadarco}"/>
+            
+            <Label Content="Material:&#xD;&#xA;" HorizontalAlignment="Left" Margin="58,140,0,0" VerticalAlignment="Top" Foreground="White"/>
+            
+            <TextBox x:Name="TB_material" HorizontalAlignment="Left" Height="23" Margin="147,140,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"
+                     Text="{Binding Path=SapatoSelecionado.SP_Material}"/>
+            
+            <Label Content="Cor:&#xD;&#xA;" HorizontalAlignment="Left" Margin="58,177,0,0" VerticalAlignment="Top" Height="32" RenderTransformOrigin="-0.153,-0.269" Foreground="White"/>
+            
+            <TextBox x:Name="TB_Cor" HorizontalAlignment="Left" Height="23" Margin="147,182,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"
+                     Text="{Binding Path=SapatoSelecionado.SP_Cor}"/>
+            
+            <Label Content="Preço:&#xD;&#xA;" HorizontalAlignment="Left" Margin="58,214,0,0" VerticalAlignment="Top" Foreground="White"/>
+            
+            <TextBox x:Name="TB_Preco" HorizontalAlignment="Left" Height="23" Margin="147,223,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"
+                     Text="{Binding Path=SapatoSelecionado.SP_Preco}"/>
+            
+            <Button x:Name="ButtonCancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="608,121,0,0" VerticalAlignment="Top" Width="128" Height="49" Click="ButtonCancelar_Click"/>
+        </Grid>
+
+    </Grid>
+</Window>

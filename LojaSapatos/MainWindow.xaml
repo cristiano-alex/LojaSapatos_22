@@ -1,0 +1,40 @@
+﻿<Window x:Class="LojaSapatos.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    
+        mc:Ignorable="d"
+        Title="LojaSapatos" Height="800" Width="1200">
+    <Grid HorizontalAlignment="Left" Height="768" VerticalAlignment="Top" Width="1190">
+        <Image Source="/imagens/fundo.jpg" Stretch="Fill"/>
+        <Image Source="/imagens/Logo.png" Margin="866,544,10,10"/>
+        <Image Source="/imagens/Logo.png" Margin="0,25,876,529"/>
+        <Image Source="/imagens/logo21.png" Stretch="Fill"/>
+        <!--Menu-->
+        <Menu Name="menuPrincipal" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="1190">
+            <!--Cadastro de Produtos-->
+            <MenuItem Header="Cadastrar" HorizontalAlignment="Center" Height="20" Width="70">
+                <MenuItem Header="CadastrarSapatos" Click="MenuItem_Click"/>
+            </MenuItem>            
+            <!--Estoque de Produtos-->
+            <MenuItem Header="Estoque" HorizontalAlignment="Right" Height="20" Width="70">
+                <MenuItem Header="Lista de Produtos" Click="MenuItem_Click_3"/>
+            </MenuItem>
+            <!--Cliente-->
+            <MenuItem Header="Cliente" HorizontalAlignment="Right" Height="20" Width="70">
+                <MenuItem Header="Cadastrar Cliente" Click="MenuItem_Click_1"/>
+                <MenuItem Header="Lista de Clientes" Click="MenuItem_Click_2"/>
+            </MenuItem>
+            <!--Compras-->
+            <MenuItem Header="Carrinho" HorizontalAlignment="Right" Height="20" Width="70" Click="Menu_Carrinho"/>
+            <!--Relatorio-->
+            <MenuItem Header="Relatorio" HorizontalAlignment="Right" Height="20" Width="70">
+                <MenuItem Header="Relatorio de Vendas"/>
+
+            </MenuItem>
+
+        </Menu>
+    </Grid>
+
+</Window>
