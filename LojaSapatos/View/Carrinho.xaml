@@ -9,12 +9,11 @@
     <Grid HorizontalAlignment="Left" Height="419" VerticalAlignment="Top" Width="792">
         <Image Source="/imagens/fundo.jpg" Stretch="Fill"/>
         <Border Background="Black" Opacity="0.4" Margin="10,10,21,10" CornerRadius="30"/>
-        <DataGrid x:Name="CarrinhoDataGrid" 
-                  AutoGenerateColumns="True" HorizontalAlignment="Left" Height="279" Margin="40,46,0,0" VerticalAlignment="Top" Width="699">
-
-        </DataGrid>
         <Button x:Name="TB_Confirmar_button" Content="Confirmar" HorizontalAlignment="Left" Margin="626,358,0,0" VerticalAlignment="Top" Width="113" Height="34" Click="TB_Confirmar_button_Click"/>
-
+        <ComboBox ItemsSource="{Binding Path=Clientes}"  SelectedItem="{Binding Path=PedidoSelecionado.Cliente}"
+                  DisplayMemberPath="Cl_Nome" Margin="141,117,452,274"/>
+        <ComboBox ItemsSource="{Binding Path= Sapatos}" SelectedItem="{Binding Path=PedidoSelecionado.ItemPedido.Sapato}"
+            DisplayMemberPath="SP_Nome" Margin="397,117,196,274"/>
 
 
     </Grid>

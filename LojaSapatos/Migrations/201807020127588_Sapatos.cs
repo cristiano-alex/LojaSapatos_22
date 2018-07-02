@@ -3,7 +3,7 @@ namespace LojaSapatos.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Clientes : DbMigration
+    public partial class Sapatos : DbMigration
     {
         public override void Up()
         {

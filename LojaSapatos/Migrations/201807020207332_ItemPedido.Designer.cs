@@ -7,13 +7,13 @@ namespace LojaSapatos.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class Clientes : IMigrationMetadata
+    public sealed partial class ItemPedido : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Clientes));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(ItemPedido));
         
         string IMigrationMetadata.Id
         {
-            get { return "201806292333037_Clientes"; }
+            get { return "201807020207332_ItemPedido"; }
         }
         
         string IMigrationMetadata.Source

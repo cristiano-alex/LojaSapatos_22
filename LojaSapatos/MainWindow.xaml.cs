@@ -26,11 +26,7 @@ namespace LojaSapatos
             InitializeComponent();
         }
 
-        private void Menu_Carrinho(object sender, RoutedEventArgs e)
-        {
-            Carrinho carrinho = new Carrinho();
-            carrinho.Show();
-        }
+       
 
 
 
@@ -62,6 +58,18 @@ namespace LojaSapatos
         private void MenuItem_Click_4(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void MenuItem_Click_5(object sender, RoutedEventArgs e)
+        {
+            Pedido pedido = new Pedido();
+            pedido.Show();
+        }
+
+        private void MenuItem_Click_6(object sender, RoutedEventArgs e)
+        {
+            Carrinho carrinho = new Carrinho();
+            carrinho.Show();
         }
     }
 }

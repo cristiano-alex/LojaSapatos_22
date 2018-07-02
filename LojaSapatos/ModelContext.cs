@@ -18,5 +18,9 @@ namespace LojaSapatos
         public DbSet<Cliente> Clientes { get; set; }
 
         public DbSet<Sapatos> Sapatos { get; set; }
+
+        public DbSet<ItemPedido> ItemPedido { get; set; }
+
+        public DbSet<Pedido> Pedido { get; set; }
     }
 }

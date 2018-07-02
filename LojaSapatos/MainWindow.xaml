@@ -27,7 +27,10 @@
                 <MenuItem Header="Lista de Clientes" Click="MenuItem_Click_2"/>
             </MenuItem>
             <!--Compras-->
-            <MenuItem Header="Carrinho" HorizontalAlignment="Right" Height="20" Width="70" Click="Menu_Carrinho"/>
+            <MenuItem Header="Carrinho" HorizontalAlignment="Right" Height="20" Width="70" >
+                <MenuItem Header="Pedido" Click="MenuItem_Click_5" />
+                <MenuItem Header="ItemPedido" Click="MenuItem_Click_6" />
+            </MenuItem>
             <!--Relatorio-->
             <MenuItem Header="Relatorio" HorizontalAlignment="Right" Height="20" Width="70">
                 <MenuItem Header="Relatorio de Vendas"/>

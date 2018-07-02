@@ -61,6 +61,25 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Migrations\201807020127066_Cliente.cs" />
+    <Compile Include="Migrations\201807020127066_Cliente.Designer.cs">
+      <DependentUpon>201807020127066_Cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807020127588_Sapatos.cs" />
+    <Compile Include="Migrations\201807020127588_Sapatos.Designer.cs">
+      <DependentUpon>201807020127588_Sapatos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807020206424_Pedido.cs" />
+    <Compile Include="Migrations\201807020206424_Pedido.Designer.cs">
+      <DependentUpon>201807020206424_Pedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807020207332_ItemPedido.cs" />
+    <Compile Include="Migrations\201807020207332_ItemPedido.Designer.cs">
+      <DependentUpon>201807020207332_ItemPedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pedido.xaml.cs">
+      <DependentUpon>Pedido.xaml</DependentUpon>
+    </Compile>
     <Page Include="View\CadastrarSapatos.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -91,16 +110,11 @@
     </Compile>
     <Compile Include="FacadeClientes.cs" />
     <Compile Include="FacadeSapato.cs" />
-    <Compile Include="Migrations\201806292331292_Sapatos.cs" />
-    <Compile Include="Migrations\201806292331292_Sapatos.Designer.cs">
-      <DependentUpon>201806292331292_Sapatos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201806292333037_Clientes.cs" />
-    <Compile Include="Migrations\201806292333037_Clientes.Designer.cs">
-      <DependentUpon>201806292333037_Clientes.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ModelContext.cs" />
+    <Compile Include="Model\ItemPedido.cs" />
+    <Compile Include="Model\Modelo.cs" />
+    <Compile Include="Model\Pedido.cs" />
     <Compile Include="View\CadastrarSapatos.xaml.cs">
       <DependentUpon>CadastrarSapatos.xaml</DependentUpon>
     </Compile>
@@ -120,6 +134,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="View\Pedido.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\Cliente.cs" />
@@ -137,11 +155,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="Migrations\201806292331292_Sapatos.resx">
-      <DependentUpon>201806292331292_Sapatos.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201807020127066_Cliente.resx">
+      <DependentUpon>201807020127066_Cliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201806292333037_Clientes.resx">
-      <DependentUpon>201806292333037_Clientes.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201807020127588_Sapatos.resx">
+      <DependentUpon>201807020127588_Sapatos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807020206424_Pedido.resx">
+      <DependentUpon>201807020206424_Pedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807020207332_ItemPedido.resx">
+      <DependentUpon>201807020207332_ItemPedido.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
