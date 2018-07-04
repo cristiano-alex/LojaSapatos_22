@@ -66,10 +66,12 @@ namespace LojaSapatos
             pedido.Show();
         }
 
-        private void MenuItem_Click_6(object sender, RoutedEventArgs e)
+        
+
+        private void MenuItem_Click_7(object sender, RoutedEventArgs e)
         {
-            Carrinho carrinho = new Carrinho();
-            carrinho.Show();
+            SelecinarPedido selecinarPedido = new SelecinarPedido();
+            selecinarPedido.Show();
         }
     }
 }

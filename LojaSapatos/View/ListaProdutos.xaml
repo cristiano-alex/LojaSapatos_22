@@ -18,7 +18,6 @@
 
         <Button x:Name="BT_Cancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="40,358,0,0" VerticalAlignment="Top" Width="113" Height="34" Click="BT_Cancelar_Click" />
         <Button x:Name="BT_Editar" Content="Editar" HorizontalAlignment="Left" Margin="626,358,0,0" VerticalAlignment="Top" Width="113" Height="34" Click="BT_Editar_Click"/>
-        <TextBox Margin="279,365,272,27" Text="{Binding Path=SapatoSelecionado.SP_Nome}"/>
 
 
 

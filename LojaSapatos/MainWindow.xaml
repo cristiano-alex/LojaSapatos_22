@@ -29,7 +29,8 @@
             <!--Compras-->
             <MenuItem Header="Carrinho" HorizontalAlignment="Right" Height="20" Width="70" >
                 <MenuItem Header="Pedido" Click="MenuItem_Click_5" />
-                <MenuItem Header="ItemPedido" Click="MenuItem_Click_6" />
+               
+                <MenuItem Header="SelecionarPedido" Click="MenuItem_Click_7" />
             </MenuItem>
             <!--Relatorio-->
             <MenuItem Header="Relatorio" HorizontalAlignment="Right" Height="20" Width="70">

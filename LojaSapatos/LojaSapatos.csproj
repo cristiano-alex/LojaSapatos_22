@@ -80,15 +80,14 @@
     <Compile Include="View\Pedido.xaml.cs">
       <DependentUpon>Pedido.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\SelecinarPedido.xaml.cs">
+      <DependentUpon>SelecinarPedido.xaml</DependentUpon>
+    </Compile>
     <Page Include="View\CadastrarSapatos.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\CadastroCliente.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\Carrinho.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -121,9 +120,6 @@
     <Compile Include="View\CadastroCliente.xaml.cs">
       <DependentUpon>CadastroCliente.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Carrinho.xaml.cs">
-      <DependentUpon>Carrinho.xaml</DependentUpon>
-    </Compile>
     <Compile Include="View\ListaClientes.xaml.cs">
       <DependentUpon>ListaClientes.xaml</DependentUpon>
     </Compile>
@@ -135,6 +131,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="View\Pedido.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SelecinarPedido.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

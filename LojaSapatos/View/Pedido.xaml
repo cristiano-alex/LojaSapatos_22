@@ -9,7 +9,7 @@
     <Grid HorizontalAlignment="Left" Height="419" VerticalAlignment="Top" Width="792">
         <Image Source="/imagens/fundo.jpg" Stretch="Fill"/>
         <Border Background="Black" Opacity="0.4" Margin="10,10,21,10" CornerRadius="30"/>
-        <DataGrid x:Name="CarrinhoDataGrid" 
+        <DataGrid x:Name="CarrinhoDataGrid" ItemsSource="{Binding Path=ItemPedido}" SelectedItem="{Binding Path=ItemPedidoSelecionado}"
                   AutoGenerateColumns="True" HorizontalAlignment="Left" Height="279" Margin="40,46,0,0" VerticalAlignment="Top" Width="699">
 
         </DataGrid>

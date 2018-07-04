@@ -17,12 +17,11 @@ using LojaSapatos.Model;
 namespace LojaSapatos.View
 {
     /// <summary>
-    /// Lógica interna para Carrinho.xaml
+    /// Lógica interna para SelecinarPedido.xaml
     /// </summary>
-    public partial class Carrinho : Window, INotifyPropertyChanged
+    public partial class SelecinarPedido : Window, INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
-
         private void NotifyPropertyChanged(string Property)
         {
             if (this.PropertyChanged != null)
@@ -32,33 +31,21 @@ namespace LojaSapatos.View
             }
         }
 
-        private ModelContext ctx = new ModelContext();
-        private ICollection<Cliente> _Clientes;
-        private ICollection<Sapatos> _Sapatos;
-        private Pedido _PedidoSelecinado;
-
-        public Pedido PedidoSelecinado
+        public ItemPedido ItemPedidoSelecionado
         {
-            get { return _PedidoSelecinado; }
+            get => _ItemPedido;
             set
             {
-                _PedidoSelecinado = value;
-                this.NotifyPropertyChanged("ItemPedido");
-            }
-        }   
-           
-
-
-        public ICollection<Cliente> Clientes
-        {
-            get { return _Clientes; }
-            set
-            {
-                _Clientes = value;
-                this.NotifyPropertyChanged("Clientes");
+                _ItemPedido = value;
+                this.NotifyPropertyChanged("ItemPedidoSelecionado");
             }
         }
+        private ModelContext ctx = new ModelContext();
+        private ItemPedido _ItemPedido = new ItemPedido();
+        public IList<ItemPedido> ItemPedido { get; set; }
+        private ICollection<Sapatos> _Sapatos;
 
+        
         public ICollection<Sapatos> Sapatos
         {
             get { return _Sapatos; }
@@ -69,24 +56,28 @@ namespace LojaSapatos.View
             }
         }
 
-        public Carrinho()
+        public SelecinarPedido()
         {
             InitializeComponent();
-            this.Sapatos = ctx.Sapatos.ToList();
-            this.Clientes = ctx.Clientes.ToList();
-
-            
-
-
-            
 
             this.DataContext = this;
+
+            this.ItemPedido = ctx.ItemPedido.ToList();
+            this.Sapatos = ctx.Sapatos.ToList();
+            
+            
+
+
+
+
         }
 
         private void TB_Confirmar_button_Click(object sender, RoutedEventArgs e)
         {
-            ctx.Pedido.Add(this.PedidoSelecinado);
-            MessageBox.Show("Compra Efetuada");
+            ctx.ItemPedido.Add(ItemPedidoSelecionado);
+            ctx.SaveChanges();
+
+            MessageBox.Show("Pedido Cadastrado Com Sucesso!!!");
         }
     }
 }
